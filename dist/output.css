@@ -1,0 +1,1622 @@
+/*
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-page {
+  background: url('../src/images/layout-mobile.png');
+  background-size: cover;
+  min-height: 2191px;
+}
+
+html {
+  font-family: 'Oxygen', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+  cursor:pointer;
+}
+
+/* Navbar */
+
+.navbar {
+  padding: 0px;
+}
+
+.navbar .navbar-section {
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out 0s;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.navbar .active {
+  transform: translateX(0);
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.navbar .nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.navbar .navbar-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* animation navbar link */
+
+.navbar .navbar-link a {
+  display: inline-block;
+  position: relative;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.navbar .navbar-link a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform .5s ease;
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 239 222 / var(--tw-bg-opacity));
+}
+
+.navbar .navbar-link a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* end navbar animation link */
+
+/* Form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form .form-group {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form .form-group .input-group {
+  position: relative;
+}
+
+.form input {
+  height: 2.25rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  padding-left: 3rem;
+}
+
+.form .input-icon {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 239 222 / var(--tw-bg-opacity));
+}
+
+.form .profile-icon:before {
+  content: url(../src/svg/profile.svg);
+}
+
+.form .password-icon:before {
+  content: url(../src/svg/password.svg);
+}
+
+.input-group .icon {
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  padding-top: 0.25rem;
+}
+
+.input-group .icon:after {
+  display: none;
+}
+
+.input-group .icon:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 239 222 / var(--tw-bg-opacity));
+}
+
+.input-group .icon:hover:before {
+  animation: toBottomFromTop 0.3s forwards;
+}
+
+.form .button {
+  height: 2.25rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 41 70 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+}
+
+.button-form {
+  position: relative;
+  padding: 5px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  background-color: #142946;
+  box-shadow: hsla(210, 40%, 52%, 0.4) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-form:focus {
+  outline-color: transparent;
+  box-shadow: hsl(210, 80%, 42%) 2px 2px 22px;
+}
+
+/* bubbles */
+
+.button-form::before {
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
+  background: radial-gradient(
+      circle at 20% 35%,
+      transparent 0,
+      transparent 2px,
+      hsla(210, 50%, 85%, 1) 3px,
+      hsla(210, 50%, 85%, 1) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 75% 44%,
+      transparent 0,
+      transparent 2px,
+      hsla(210, 50%, 85%, 1) 3px,
+      hsla(210, 50%, 85%, 1) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 46% 52%,
+      transparent 0,
+      transparent 4px,
+      hsla(210, 50%, 85%, 1) 5px,
+      hsla(210, 50%, 85%, 1) 6px,
+      transparent 6px
+    );
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
+/* End form */
+
+/* hamburger */
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 20;
+  display: block;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+/* End hamburger */
+
+/* heading section */
+
+.heading {
+  width: 90%;
+  margin: auto;
+  padding-top: 5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* ending heading section */
+
+/* advantage isukses */
+
+.advantage {
+  width: 95%;
+  position: relative;
+  margin: auto;
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.advantage .student {
+  animation: leftToRight 3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.advantage .book {
+  max-width: 225px;
+  right: -10px;
+  bottom: -400px;
+  animation: RightToLeft 3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  position: absolute;
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes RightToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.advantage .advantage-isukses__heading {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+/* Accordion */
+
+.advantage .accordion-menu {
+  position: relative;
+  display: inline-block;
+  padding-top: 2rem;
+}
+
+.advantage .accordion-menu h2 {
+  margin: 0px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.advantage .accordion-menu p {
+  transform: translate(0, 0);
+  position: relative;
+  margin-top: 1rem;
+  overflow: auto;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  opacity: 1;
+}
+
+.advantage .accordion-menu ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0 20px 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(255, 255, 255, 0.19);
+  border-radius: 0.5rem;
+}
+
+.advantage .accordion-menu ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 1px solid #dce7eb;
+}
+
+.advantage .accordion-menu ul li:nth-child(1) {
+  border-top: 1px solid transparent;
+}
+
+.advantage .accordion-menu ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.advantage .accordion-menu ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+
+.advantage .accordion-menu ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.advantage .accordion-menu ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.advantage .accordion-menu ul li .arrow {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+
+.advantage .accordion-menu ul li .fas {
+  color: #142946;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.advantage .accordion-menu ul li .arrow:before,
+.advantage .accordion-menu ul li .arrow:after {
+  content: "";
+  position: absolute;
+  background-color: #142946;
+  width: 3px;
+  height: 9px;
+}
+
+.advantage .accordion-menu ul li .arrow:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+
+.advantage .accordion-menu ul li .arrow:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+.advantage .accordion-menu ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.advantage .accordion-menu ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.advantage .accordion-menu ul li input[type=checkbox]:checked ~ .arrow:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+
+.advantage .accordion-menu ul li input[type=checkbox]:checked ~ .arrow:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.advantage .transition,
+p,
+.advantage .accordion-menu ul li .arrow:before,
+.advantage .accordion-menu ul li .arrow:after {
+  transition: all 0.25s ease-in-out;
+}
+
+.advantage .flipIn,
+h1,
+.advantage .accordion-menu ul li {
+  animation: flipdown 0.5s ease both;
+}
+
+.no-select,
+h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotateX(8deg);
+  }
+
+  83% {
+    transform: rotateX(6deg);
+  }
+
+  92% {
+    transform: rotateX(-3deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+
+  /* End accordion */
+}
+
+/* Register and footer  */
+
+.register-footer {
+  margin-top: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.register-footer .register {
+  width: 90%;
+  margin: auto;
+}
+
+.register-footer .register-heading {
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.register-footer .button-register {
+  width: 155px;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.register-footer .footer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.register-footer .footer-icon {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.register-footer .footer-support {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.register-footer .footer-line {
+  border: .5px solid;
+  height: 0px;
+  width: 100%;
+  --tw-border-opacity: 1;
+  border-color: rgb(122 173 165 / var(--tw-border-opacity));
+}
+
+.register-footer .footer-reserved {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* End register and footer */
+
+/* Forgot password */
+
+.forgot-password-body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 239 222 / var(--tw-bg-opacity));
+}
+
+.forgot-password .forgot-password__image-section {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.forgot-password .forgot-password__image {
+  width: 100%;
+  background-size: cover;
+}
+
+.forgot-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.forgot-password .form__section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.forgot-password .forgot-password__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.forgot-password .forgot-password__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.forgot-password .forgot-password__heading {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.forgot-password .forgot-password__sub-heading {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.forgot-password .input-icon {
+  --tw-bg-opacity: 1;
+  background-color: rgb(122 173 165 / var(--tw-bg-opacity));
+}
+
+.forgot-password .form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.forgot-password .forgot-password__button {
+  height: 36px;
+}
+
+/* End forgot password */
+
+/* Quiz */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th:after {
+  content: ' \2193';
+}
+
+th.sort-asc:after {
+  content: ' \2191';
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 640px) {
+  .main-page {
+    background: url('../src/images/layout.png');
+    background-size: cover;
+    min-height: 1600px;
+  }
+
+  /* heading section */
+
+  .heading .heading-title {
+    max-width: 600px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  /* End heading section */
+
+  /* Advantage section */
+
+  .advantage {
+    flex-direction: column;
+  }
+
+  .advantage .student {
+    max-width: 493px;
+  }
+
+  .advantage .advantage-isukses {
+    max-width: 544px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown {
+    margin-bottom: 10px;
+  }
+
+  .options {
+    margin-top: 5px;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  input[type="radio"][disabled]+label {
+    color: #aaa;
+  }
+
+  .heading .heading-title {
+    max-width: 100%;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .advantage {
+    margin-top: 20rem;
+    align-items: center;
+  }
+
+  .advantage .book {
+    max-width: 325px;
+  }
+
+  /* Register and footer */
+
+  .register-footer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .register-footer .logo {
+    margin: auto;
+  }
+
+  .register-footer .button-register {
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-page {
+    background: url('../src/images/layout.png');
+    background-size: cover;
+  }
+
+  /* Navbar */
+
+  .navbar {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .navbar .navbar-section {
+    background-color: transparent;
+    transform: translateX(0);
+    position: relative;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    padding: 0px;
+  }
+
+  .navbar .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar .navbar-link {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  /* Form */
+
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .form .form-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .form input {
+    height: 2.25rem;
+    width: 100%;
+    border-radius: 0.375rem;
+    padding-left: 3rem;
+  }
+
+  .form .button {
+    height: 2.25rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(20 41 70 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .button-form {
+    padding: 0 40px;
+  }
+
+  .register-footer .button-register {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* End Form */
+
+  .menu {
+    display: none;
+  }
+
+  /* End Desktop Navbar */
+
+  /* heading section */
+
+  .heading {
+    margin: 0px;
+    width: 100%;
+    padding-top: 0px;
+    padding-left: 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  /* end heading section */
+
+  /* Advantage section */
+
+  .advantage {
+    margin-top: 5rem;
+    flex-direction: row;
+  }
+
+  .advantage .student {
+    max-width: 493px;
+  }
+
+  .advantage .book {
+    max-width: 325px;
+    top: 150px;
+    right: -50px;
+  }
+
+  /*  End Advantage section */
+
+  /* register and footer */
+
+  .register-footer {
+    gap: 250px;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .register-footer .register {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .register-footer .footer {
+    padding-top: 2.5rem;
+  }
+
+  .register-footer .register-heading {
+    max-width: 306px;
+  }
+
+  /* End register and footer */
+
+  /* forgot password */
+
+  .forgot-password {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .forgot-password .forgot-password__image-section {
+    order: 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .forgot-password .forgot-password__image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .forgot-password .form__section {
+    margin: auto;
+  }
+
+  .forgot-password .forgot-password__form {
+    max-width: 400px;
+    flex-direction: column;
+  }
+
+  .forgot-password .form-group {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-page .heading-title {
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  /* Advantage section */
+
+  .advantage .book {
+    max-width: 425px;
+    top: 200px;
+  }
+
+  /*  End Advantage section */
+}
+
+@media (min-width: 1536px) {
+  .main-page {
+    background: url('../src/images/layout-2xl.png');
+    background-size: 100% 150%;
+    min-height: 100vh;
+  }
+
+  /* advantage isukses */
+
+  .advantage {
+    margin-top: 15rem;
+    gap: 10rem;
+  }
+
+  .advantage .student {
+    max-width: 720px;
+  }
+
+  /* register and footer */
+
+  .register-footer {
+    margin-top: 20rem;
+    position: relative;
+  }
+
+  .register-footer .register {
+    position: absolute;
+    top: 0px;
+    left: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .register-footer .footer {
+    position: absolute;
+    top: 10rem;
+    right: 15rem;
+    padding-bottom: 3rem;
+  }
+}
