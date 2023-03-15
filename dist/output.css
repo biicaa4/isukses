@@ -1204,6 +1204,8 @@ h2 {
 }
 
 .forgot-password .form__section {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -1248,55 +1250,6 @@ h2 {
 }
 
 /* End forgot password */
-
-/* Quiz */
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  cursor: pointer;
-}
-
-th:hover {
-  background-color: #ddd;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-th:after {
-  content: ' \2193';
-}
-
-th.sort-asc:after {
-  content: ' \2191';
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  cursor: pointer;
-}
-
-th:hover {
-  background-color: #ddd;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
 
 @media (min-width: 640px) {
   .main-page {
@@ -1552,6 +1505,7 @@ tr:nth-child(even) {
 
   .forgot-password .form__section {
     margin: auto;
+    width: auto;
   }
 
   .forgot-password .forgot-password__form {
@@ -1618,5 +1572,151 @@ tr:nth-child(even) {
     top: 10rem;
     right: 15rem;
     padding-bottom: 3rem;
+  }
+}
+
+/* Pendaftaran */
+
+.register {
+  display: flex;
+  flex-direction: column;
+}
+
+.register .register-information {
+  position: relative;
+}
+
+.register .register-image {
+  min-height: 100vh;
+}
+
+.register .register-information__content {
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  text-align: center;
+}
+
+.register .register-title {
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.register .register-content {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.register .register-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.register .register-cta {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.register .register-cta:after {
+  content: url(../src/svg/right-arrow.svg);
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+
+.register .form-container {
+  width: 100%;
+}
+
+.register .form-container:first-child {
+  margin-top: 4rem;
+}
+
+.register .form-container {
+  outline: 1px solid #F2F5F7;
+  margin-top: 2.75rem;
+  height: 5rem;
+  width: 100%;
+  border-radius: 9999px;
+}
+
+.register .form-container__item {
+  display: grid;
+  gap: 0.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+
+.register .form-container__item label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.register .form-container__item input {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.register .form-container__item label:after {
+  content: ' *'
+}
+
+.register .form-container__item select {
+  color: #9FB1BD;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.register .form-container__item select:focus {
+  outline: none;
+}
+
+.register .error-message {
+  color: #EB4444;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.register .success {
+  outline: 0;
+}
+
+.register .error {
+  outline: 1px solid #EB4444;
+}
+
+.register .register-form {
+  margin: auto;
+  width: 90%;
+}
+
+.register .register-form .button-form {
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .register {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .register .register-form .button-form {
+    width: 155px;
+    height: 40px;
+    margin: 3rem 0 0;
   }
 }

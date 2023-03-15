@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
     <link rel="stylesheet" type="text/css" href="/dist/output.css" />
-    <title>Isukses | Lupa Kata Laluan</title>
+    <title>Isukses | Pendaftaran</title>
 </head>
 
-<body class="forgot-password-body">
-<div class="dropdown">
-    <h4>Step 1: Select an option</h4>
-    <div class="options">
-        <label>
-            <input type="radio" name="option1" value="a">
-            Option A
-        </label>
-        <label>
-            <input type="radio" name="option1" value="b">
-            Option B
-        </label>
-        <label>
-            <input type="radio" name="option1" value="c">
-            Option C
-        </label>
+<body >
+    <div class="register">
+        <section class="register-information">
+            <img class="register-image" src="./src/images/pendaftaran-background.png" alt="pendaftaran Isukses">
+            <div class="register-information__content">
+                <h1 class="register-title">Pendaftaran ISUKSES percuma 2022</h1>
+                <p class="register-content">Sila lengkapkan langkah-langkah berikut untuk tujuan Pendaftaran ISUKSES percuma 2022.</p>
+                <h2 class="register-subtitle">Langkah 1. Lengkapkan butiran murid.</h2>
+                <p class="register-content">Isi butiran murid seperti di sebelah kanan. Gagal mengisi butiran murid akan menyebabkan pendaftaran tidak dapat dilakukan dan pelajar tidak akan mendapat akses bagi Pendaftaran ISUKSES percuma 2022.</p>
+                <a target="_blank" class="register-cta" href="https://isukses.com.my/home/syarat_pertandingan.pdf">Syarat-syarat pentandingan</a>
+                <a target="_blank" class="register-cta" href="https://isukses.com.my/home/spm_challenge_2022.php">Semak nama peserta</a>
+            </div>
+        </section>
+        <section class="register-form">
+            <form id="student-form" action="/">
+            <div class="form-container">
+                <div class="form-container__item">
+                    <label for="ic">Kad Pengenalan Pelajar</label>
+                    <input type="text" id="ic" name="ic" placeholder="Kad Pengenalan Pelajar">
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container__item">
+                    <label for="tahap">Tahap</label>
+                    <select id="tahap" name="tahap">
+                        <option value="option1">Tahap 1</option>
+                        <option value="option2">Tahap 2</option>
+                        <option value="option3">Tahap 3</option>
+                    </select>
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container__item">
+                    <label for="student">Nama Pelajar</label>
+                    <input type="text" id="student" name="student" placeholder="Nama Pelajar">
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container__item">
+                    <label for="sekolah">Sekolah/Institute</label>
+                    <select id="sekolah" name="sekolah">
+                        <option value="option1">Sekolah Mergong</option>
+                        <option value="option2">SMK Barakbah</option>
+                        <option value="option3">SMK Tunku Abdul Rahman</option>
+                    </select>
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container__item">
+                    <label for="emel">Emel pelajar atau penjaga</label>
+                    <input type="email" id="emel" name="emel" placeholder="Emel pelajar atau penjaga">
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <button type="submit" id="student-button" class="button-form register-form" style="--content: '&nbsp;'">
+                Hantar
+            </button>
+            </form>
+        </section>
     </div>
-</div>
-
-<div class="dropdown">
-    <h4>Step 2: Select an option</h4>
-    <div class="options">
-        <label>
-            <input type="radio" name="option2" value="d" disabled>
-            Option D
-        </label>
-        <label>
-            <input type="radio" name="option2" value="e" disabled>
-            Option E
-        </label>
-        <label>
-            <input type="radio" name="option2" value="f" disabled>
-            Option F
-        </label>
-    </div>
-</div>
-
-<div class="dropdown">
-    <h4>Step 3: Select an option</h4>
-    <div class="options">
-        <label>
-            <input type="radio" name="option3" value="g" disabled>
-            Option G
-        </label>
-        <label>
-            <input type="radio" name="option3" value="h" disabled>
-            Option H
-        </label>
-        <label>
-            <input type="radio" name="option3" value="i" disabled>
-            Option I
-        </label>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script>
-<script src="register.js"></script>
-
+<script src="./register.js"></script>
 </body>
 
 </html>

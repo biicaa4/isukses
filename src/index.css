@@ -513,6 +513,8 @@ h2 {
 }
 
 .forgot-password .form__section {
+  width: 90%;
+  margin: auto;
   @apply flex flex-col gap-16;
 }
 .forgot-password .forgot-password__section {
@@ -537,55 +539,6 @@ h2 {
   height: 36px;
 }
 /* End forgot password */
-
-/* Quiz */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  cursor: pointer;
-}
-
-th:hover {
-  background-color: #ddd;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-th:after {
-  content: ' \2193';
-}
-
-th.sort-asc:after {
-  content: ' \2191';
-}
-
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  cursor: pointer;
-}
-
-th:hover {
-  background-color: #ddd;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
 
 
 @screen sm {
@@ -774,7 +727,7 @@ input[type="radio"][disabled]+label {
   @apply w-full h-full;
 }
 .forgot-password .form__section {
-  @apply m-auto;
+  @apply w-auto m-auto;
 }
 .forgot-password .forgot-password__form {
   max-width: 400px;
@@ -830,3 +783,109 @@ input[type="radio"][disabled]+label {
   @apply absolute top-40 right-60 pb-12;
  }
 }
+  /* Pendaftaran */
+  .register {
+    @apply flex flex-col;
+  }
+
+  .register .register-information {
+    @apply relative;
+  }
+  .register .register-image {
+    @apply min-h-screen;
+  }
+
+  .register .register-information__content {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    @apply absolute flex flex-col gap-8 text-center px-10;
+  }
+
+  .register .register-title {
+    @apply text-3xl font-bold text-center;
+  }
+
+  .register .register-content {
+    @apply text-base;
+  }
+
+  .register .register-subtitle {
+    @apply text-xl font-bold;
+  }
+
+  .register .register-cta {
+    @apply text-base font-bold underline;
+  }
+
+  .register .register-cta:after {
+    content: url(../src/svg/right-arrow.svg);
+
+    @apply align-middle ml-1;
+  }
+  
+  .register .form-container {
+    @apply w-full;
+  }
+  
+  .register .form-container:first-child {
+    @apply mt-16;
+  }
+  .register .form-container {
+    outline: 1px solid #F2F5F7;
+
+    @apply  w-full rounded-full h-20 mt-11;
+  }
+  .register .form-container__item {
+    @apply grid gap-1 px-8 pt-4;
+  }
+  .register .form-container__item label {
+    @apply text-xs font-bold;
+  }
+  .register .form-container__item input {
+    @apply outline-none;
+  }
+  .register .form-container__item label:after {
+    content: ' *'
+  }
+
+  .register .form-container__item select {
+    color: #9FB1BD;
+
+    @apply text-base pt-2;
+  }
+
+  .register .form-container__item select:focus {
+    outline: none;
+  }
+
+  .register .error-message {
+    color: #EB4444;
+    @apply text-base pt-6;
+  }
+  .register .success {
+    outline: 0;
+  }
+  .register .error {
+    outline: 1px solid #EB4444;
+  }
+  
+  .register .register-form {
+    @apply m-auto;
+    width: 90%;
+  }
+  .register .register-form .button-form {
+    @apply mt-16;
+  }
+
+  @screen md {
+  .register {
+    @apply grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .register .register-form .button-form {
+    width: 155px;
+    height: 40px;
+    margin: 3rem 0 0;
+  }
+  }
